@@ -5,6 +5,7 @@ import { useState } from "react";
 import { Navbar, NavbarBrand } from "reactstrap";
 import "./Header.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBook, faUser } from "@fortawesome/free-solid-svg-icons";
 const Header = (args) => {
   const [isOpen, setIsOpen] = useState(false);
   const toggle = () => setIsOpen(!isOpen);
@@ -12,10 +13,10 @@ const Header = (args) => {
     <div>
       <Navbar {...args} className="navbar bg-light fixed-top">
         <NavbarBrand href="/" className="text-dark">
-          <FontAwesomeIcon icon={["fal"]}></FontAwesomeIcon>
+          <FontAwesomeIcon icon={faBook} />
         </NavbarBrand>
         <NavbarBrand href="/user" className="">
-          <i className="fa"></i>
+          <FontAwesomeIcon icon={faUser} />
         </NavbarBrand>
       </Navbar>
     </div>
