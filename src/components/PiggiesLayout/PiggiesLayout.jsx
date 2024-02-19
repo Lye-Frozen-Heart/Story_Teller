@@ -5,9 +5,9 @@ import { Card, CardTitle, Row, Col, CardBody } from "reactstrap";
 const PiggiesLayout = () => {
   return (
     <>
-      <Row style={{ display: "flex", justifyContent: "center", padding: "2%" }}>
+      <Row style={{ display: "flex", justifyContent: "center"}}>
         <Col>
-          <Card style={{ width: "96vw", backgroundColor: "red" }}>
+          <Card style={{ width: "80vw", backgroundColor: "red" }}>
             <CardBody
               style={{ display: "flex", justifyContent: "center" }}
               className="layout-piggies"
