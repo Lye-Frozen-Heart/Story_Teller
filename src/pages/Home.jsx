@@ -1,12 +1,10 @@
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Header from "../components/Header/Header";
+import "bootstrap/dist/css/bootstrap.min.css";
+//import ReactPlayer from "react-player";
+//import ReactCanvasPaint from "react-canvas-paint";
+import "react-canvas-paint/dist/index.css";
 
 function Home() {
-  return (
-    <>
-      <Header></Header>
-    </>
-  );
+  return <></>;
 }
 
 export default Home;
