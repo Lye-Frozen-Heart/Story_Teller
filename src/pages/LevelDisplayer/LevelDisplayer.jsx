@@ -1,4 +1,4 @@
-import { Card, CardBody, Row, Col, Container } from "reactstrap";
+import { Card, CardBody, Row, Col } from "reactstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./LevelDisplayer.css";
 import {
@@ -6,7 +6,6 @@ import {
   brush,
   fruta,
   caligrafia,*/
-  sound,
   pigic,
   wolf,
   /*puzzle,
@@ -18,6 +17,7 @@ import {
   cubiertos,*/
   cubes,
   hawk,
+  tick,
   /*granja,
   blow,*/
 } from "../../assets";
@@ -36,6 +36,7 @@ const LevelDisplayer = () => {
                 <img src={pigic} alt="sound" style={{ width: "50%" }} />
               </a>
             </CardBody>
+            <img src={tick} alt="done-tick" className="done-tick" />
           </Card>
         </Col>
         <Col>
@@ -48,6 +49,7 @@ const LevelDisplayer = () => {
                 <img src={wolf} alt="sound" style={{ width: "50%" }} />
               </a>
             </CardBody>
+            <img src={tick} alt="done-tick" className="done-tick" />
           </Card>
         </Col>
         <Col>
@@ -60,6 +62,7 @@ const LevelDisplayer = () => {
                 <img src={hawk} alt="sound" style={{ width: "50%" }} />
               </a>
             </CardBody>
+            <img src={tick} alt="done-tick" className="done-tick" />
           </Card>
         </Col>
         <Col>
@@ -72,6 +75,7 @@ const LevelDisplayer = () => {
                 <img src={cubes} alt="cubes" style={{ width: "50%" }} />
               </a>
             </CardBody>
+            <img src={tick} alt="done-tick" className="done-tick" />
           </Card>
         </Col>
       </Row>

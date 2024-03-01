@@ -1,9 +1,16 @@
-.success-modal{
-    width: 100% !important;
-    height: 100vh !important;
-    background-color: rgb(39, 168, 39);
+.success-modal {
+  width: 100% !important;
+  height: 100vh !important;
+  background-color: rgb(39, 168, 39);
 }
-.font-cool{
-    color: white;
-    font-weight: 700;
+.font-cool {
+  color: white;
+  font-weight: 700;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 100px;
+}
+.icon-arrow {
+  margin-top: 15px;
+  margin-left: 30px;
 }

@@ -1,19 +1,28 @@
-import { Button } from "reactstrap";
+import { Row, Col } from "reactstrap";
 import "./SuccessModal.css";
-import { useNavigate } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-const SuccessModal = (props) =>{
-const {redirect} = props;
-let navigate = useNavigate();
- const handleNavigate = (redirect) =>{
-    navigate(redirect);
-  }
- return <div className="d-flex justify-content-center align-items-center success-modal">
-    <h1 className="text-center font-cool">
-        Has ganado!
-    </h1>
-    <Button onClick={handleNavigate(redirect)}>
-        Siguiente Juego!
-    </Button>
-</div>};
+import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
+
+const SuccessModal = (props) => {
+  const { redirect } = props;
+
+  return (
+    <div className="d-flex flex-column justify-content-center align-items-center success-modal">
+      <Row>
+        <Col>
+          <a
+            href={redirect}
+            className="d-flex justify-content-center text-center font-cool"
+          >
+            Has ganado!
+            <i className="icon-arrow">
+              <FontAwesomeIcon icon={faArrowRight} className="m-2" />
+            </i>
+          </a>
+        </Col>
+      </Row>
+    </div>
+  );
+};
 export default SuccessModal;
