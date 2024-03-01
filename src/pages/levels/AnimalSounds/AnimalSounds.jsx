@@ -19,16 +19,16 @@ import {
   oink3mp3,
   hawk1,
   hawk2,
-  correctsound
+  correctsound,
 } from "../../../assets/sounds";
 import { useEffect, useState } from "react";
 import { SuccessModal } from "../../../components";
 import { playSound } from "../../../hooks";
-const AnimalSounds = ( props ) => {
+const AnimalSounds = (props) => {
   const [success, setSuccess] = useState(false);
   // eslint-disable-next-line react/prop-types
-  const {sounds,correctOption, redirect} = props;
-  
+  const { sounds, correctOption, redirect } = props;
+  const [doneArray, setDoneArray] = useState([false, false, false, false]);
 
   const playSoundRandomPig = () => {
     let randomNumber = Math.floor(Math.random() * 3) + 1;
@@ -52,24 +52,18 @@ const AnimalSounds = ( props ) => {
     if (randomNumber === 2) audio = new Audio(hawk2);
     audio.play();
   };
-  
+
+  useEffect(() => {}, []);
 
   useEffect(() => {
-    console.log( correctOption );
-  }, []);
-
-  useEffect(() => {
-    if (correctOption !== null ) {
+    if (correctOption !== null) {
       try {
-        document
-          .getElementById(correctOption)
-          .addEventListener("click", () => {
-            setTimeout(() =>{
+        document.getElementById(correctOption).addEventListener("click", () => {
+          setTimeout(() => {
             setSuccess(true);
             playSound(correctsound);
-            },2000)
-          });
-
+          }, 2000);
+        });
       } catch {
         console.log("Err");
       }
@@ -90,7 +84,6 @@ const AnimalSounds = ( props ) => {
                   </Button>
                 </CardHeader>
                 <CardBody className="d-flex justify-content-center align-items-center">
-                  <Row></Row>
                   <Row>
                     <Col>
                       <Button
@@ -142,7 +135,9 @@ const AnimalSounds = ( props ) => {
         </Container>
       </div>
     </>
-  ):<SuccessModal redirect={redirect}/>;
+  ) : (
+    <SuccessModal redirect={redirect} />
+  );
 };
 
 export default AnimalSounds;
