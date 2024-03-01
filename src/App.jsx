@@ -1,7 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 
 import "./App.css";
-
 import { Footer } from "./components";
 import Home from "./pages/Home";
 import LevelDisplayer from "./pages/LevelDisplayer/LevelDisplayer";
@@ -9,6 +8,7 @@ import AnimalSounds from "./pages/levels/AnimalSounds/AnimalSounds";
 import { hawk2, howl2, oink1mp3 } from "../src/assets/sounds";
 import MemoryGame from "./pages/levels/MemoryGame/MemoryGame";
 import { Header } from "./components";
+
 function App() {
   const answerPig = "pig",
     answerHawk = "hawk",
@@ -54,7 +54,7 @@ function App() {
         />
         <Route path="/memory" Component={MemoryGame}></Route>
       </Routes>
-      <Footer/>
+      <Footer />
     </>
   );
 }
