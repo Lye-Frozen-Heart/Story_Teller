@@ -20,6 +20,7 @@ export { default as cerdo_peque } from "./cerdo_peque.png";
 export { default as onewolf } from "./onewolf.png";
 export { default as aguila } from "./agila.png";
 export { default as oink1mp3 } from "./sounds/oink1.mp3";
+export { default as tick } from "./tick.svg";
 export { default as A } from "./A.png";
 export { default as B } from "./B.png";
 export { default as C } from "./C.png";
