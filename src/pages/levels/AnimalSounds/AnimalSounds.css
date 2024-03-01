@@ -1,0 +1,14 @@
+.displayer-container {
+  margin: 5%;
+}
+.img-70 {
+  width: 50%;
+  height: 20%;
+}
+
+.img-80 {
+  max-width: 413px;
+  max-height: 272px;
+  width: 50%;
+  height: 100%;
+}

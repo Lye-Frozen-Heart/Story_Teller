@@ -1,15 +1,10 @@
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Header from "../components/Header/Header";
-import PiggiesLayout from "../components/PiggiesLayout/PiggiesLayout";
-import GameMenu from "../components/GameMenu/GameMenu";
+import "bootstrap/dist/css/bootstrap.min.css";
+//import ReactPlayer from "react-player";
+//import ReactCanvasPaint from "react-canvas-paint";
+import "react-canvas-paint/dist/index.css";
 
 function Home() {
-  return (
-    <>
-      <Header></Header>
-      <GameMenu></GameMenu>
-    </>
-  );
+  return <></>;
 }
 
 export default Home;
