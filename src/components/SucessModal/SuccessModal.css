@@ -1,0 +1,9 @@
+.success-modal{
+    width: 100% !important;
+    height: 100vh !important;
+    background-color: rgb(39, 168, 39);
+}
+.font-cool{
+    color: white;
+    font-weight: 700;
+}

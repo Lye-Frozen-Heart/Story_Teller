@@ -1,0 +1,29 @@
+.card-memory-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 columnas iguales */
+  justify-content: center;
+  gap: 10px; /* Reducir el espacio entre las tarjetas */
+  margin-top: 20px;
+}
+
+.card-memory {
+  width: 100px;
+  height: 100px;
+  background-color: #ccc;
+  display: flex;
+  margin: 5px;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.card-memory.flipped {
+  background-color: #fff;
+}
+
+.img-memo {
+  max-width: 80px;
+  width: auto;
+  height: auto;
+}

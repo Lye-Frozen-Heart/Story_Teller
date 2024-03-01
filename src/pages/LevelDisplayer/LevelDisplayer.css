@@ -1,0 +1,14 @@
+.displayer-container {
+  margin: 5%;
+}
+
+@media (width < 1300px) {
+  .displayer-container {
+    margin: 10%;
+  }
+}
+@media (width < 600px) {
+  .displayer-container {
+    margin: 15%;
+  }
+}
