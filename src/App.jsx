@@ -1,5 +1,4 @@
 import { Route, Routes } from "react-router-dom";
-
 import "./App.css";
 import { Footer } from "./components";
 import Home from "./pages/Home";
@@ -8,8 +7,11 @@ import AnimalSounds from "./pages/levels/AnimalSounds/AnimalSounds";
 import { hawk2, howl2, oink1mp3 } from "../src/assets/sounds";
 import MemoryGame from "./pages/levels/MemoryGame/MemoryGame";
 import { Header } from "./components";
+import useLanguage from "./components/ButtonDropdown/useState";
 
 function App() {
+  const { videoUrl, changeLanguage } = useLanguage();
+  
   const answerPig = "pig",
     answerHawk = "hawk",
     answerWolf = "wolf";
@@ -18,9 +20,9 @@ function App() {
     redirectHawk = "/memory";
   return (
     <>
-      <Header />
+      <Header/>
       <Routes>
-        <Route path="/" Component={Home} />
+        <Route path="/" element={<Home />} />
         <Route path="/levels" Component={LevelDisplayer} />
         <Route
           path="/animal_p"

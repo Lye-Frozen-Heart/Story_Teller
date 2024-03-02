@@ -1,4 +1,6 @@
 import React from "react";
+import useLanguage from "./useState";
+
 import {
   UncontrolledDropdown,
   DropdownToggle,
@@ -6,16 +8,25 @@ import {
   DropdownItem,
 } from "reactstrap";
 
-const ButtonDropdown = (props) => {
+const ButtonDropdown = () => {
+  const { changeLanguage } = useLanguage();
+
   return (
     <UncontrolledDropdown>
       <DropdownToggle caret>Idiomas</DropdownToggle>
       <DropdownMenu>
-        <DropdownItem>Català</DropdownItem>
-        <DropdownItem>Castellano</DropdownItem>
-        <DropdownItem>العربية</DropdownItem>
+        <DropdownItem onClick={() => changeLanguage("cat")}>
+          Català
+        </DropdownItem>
+        <DropdownItem onClick={() => changeLanguage("es")}>
+          Castellano
+        </DropdownItem>
+        <DropdownItem onClick={() => changeLanguage("arab")}>
+          العربية
+        </DropdownItem>
       </DropdownMenu>
     </UncontrolledDropdown>
   );
 };
+
 export default ButtonDropdown;

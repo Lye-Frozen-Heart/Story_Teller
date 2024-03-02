@@ -4,7 +4,6 @@ import { Navbar, NavbarBrand } from "reactstrap";
 import "./Header.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBook, faGamepad } from "@fortawesome/free-solid-svg-icons";
-import ButtonDropdown from "../ButtonDropdown/ButtonDropdown";
 const Header = (args) => {
   return (
     <div>
@@ -12,12 +11,10 @@ const Header = (args) => {
         <NavbarBrand href="/" className="text-dark">
           <FontAwesomeIcon icon={faBook} />
         </NavbarBrand>
-        <div className="d-flex">
           <NavbarBrand href="/levels" className="">
             <FontAwesomeIcon icon={faGamepad} />
           </NavbarBrand>
-          <ButtonDropdown />
-        </div>
+
       </Navbar>
     </div>
   );
