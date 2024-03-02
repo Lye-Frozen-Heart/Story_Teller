@@ -1,13 +1,13 @@
 footer {
   display: flex;
   margin: 0;
-  padding: 100px 0px;
+  padding: 60px 0px;
   background-image: url("../images/footercerditos.jpeg");
-  opacity: 0.9;
+  opacity: 0.5;
   background-size: cover;
   background-position: 40%;
-  border-top: 8px solid rgb(239, 239, 239);
-  border-bottom: 8px solid rgb(239, 239, 239);
+  border-top: 4px solid rgb(239, 239, 239);
+  border-bottom: 4px solid rgb(239, 239, 239);
 }
 
 footer div {
