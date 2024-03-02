@@ -1,21 +1,22 @@
 import { Route, Routes } from "react-router-dom";
 
 import "./App.css";
-
-import { Footer } from "./components";
 import Home from "./pages/Home";
 import LevelDisplayer from "./pages/LevelDisplayer/LevelDisplayer";
 import AnimalSounds from "./pages/levels/AnimalSounds/AnimalSounds";
 import { hawk2, howl2, oink1mp3 } from "../src/assets/sounds";
 import MemoryGame from "./pages/levels/MemoryGame/MemoryGame";
 import { Header } from "./components";
+import PaintComponent from "./pages/levels/PaintComponent/PaintComponent";
 function App() {
   const answerPig = "pig",
     answerHawk = "hawk",
     answerWolf = "wolf";
   const redirectPig = "/animal_w",
-    redirecWolf = "/animal_h",
-    redirectHawk = "/memory";
+    redirectWolf = "/animal_h",
+    redirectHawk = "/memory",
+    redirectMemory = "/paint",
+    redirectBrush = "/levels";
   return (
     <>
       <Header />
@@ -38,7 +39,7 @@ function App() {
             <AnimalSounds
               sounds={howl2}
               correctOption={answerWolf}
-              redirect={redirecWolf}
+              redirect={redirectWolf}
             />
           )}
         />
@@ -52,9 +53,15 @@ function App() {
             />
           )}
         />
-        <Route path="/memory" Component={MemoryGame}></Route>
+        <Route
+          path="/memory"
+          Component={() => <MemoryGame redirect={redirectMemory} />}
+        ></Route>
+        <Route
+          path="/paint"
+          Component={() => <PaintComponent redirect={redirectBrush} />}
+        ></Route>
       </Routes>
-      <Footer/>
     </>
   );
 }
