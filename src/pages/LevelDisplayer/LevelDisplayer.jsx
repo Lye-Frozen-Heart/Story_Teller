@@ -34,6 +34,7 @@ const LevelDisplayer = () => {
     false,
     false,
     false,
+    false,
   ]);
 
   const handleMarkedArray = (position) => {
@@ -156,15 +157,24 @@ const LevelDisplayer = () => {
             </Card>
           </Col>
           <Col>
-            <Card style={{ backgroundColor: "#999999" }}>
+            <Card>
               <CardBody className="d-flex justify-content-center align-items-center">
                 <a
-                  href=""
+                  href="/draggame"
                   className="d-flex justify-content-center align-items-center"
                 >
                   <img src={village} alt="village" style={{ width: "40%" }} />
                 </a>
               </CardBody>
+              {markedArray[5] == true ? (
+                <a onClick={() => handleMarkedArray(5)}>
+                  <img src={tick} alt="done-tick" className="done-tick" />
+                </a>
+              ) : (
+                <a onClick={() => handleMarkedArray(5)}>
+                  <img src={notmark} alt="not-tick" className="done-tick" />
+                </a>
+              )}
             </Card>
           </Col>
         </Row>

@@ -28,7 +28,6 @@ const AnimalSounds = (props) => {
   const [success, setSuccess] = useState(false);
   // eslint-disable-next-line react/prop-types
   const { sounds, correctOption, redirect } = props;
-  const [doneArray, setDoneArray] = useState([false, false, false, false]);
 
   const playSoundRandomPig = () => {
     let randomNumber = Math.floor(Math.random() * 3) + 1;

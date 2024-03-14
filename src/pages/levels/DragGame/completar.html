@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Completar la Frase</title>
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="completar.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="row col-12">
+        <div class="col-4">
+          <img
+            id="word1"
+            class="word col-4"
+            draggable="true"
+            src="./images/cerditoS2-removebg-preview (1).png"
+          />
+        </div>
+        <div class="col-4">
+          <img
+            id="word2"
+            class="word col-4"
+            draggable="true"
+            src="./images/cerditoM2-removebg-preview (1).png"
+          />
+        </div>
+        <div class="col-4">
+          <img
+            id="word3"
+            class="word col-4"
+            draggable="true"
+            src="./images/cerditoL2-removebg-preview (1).png"
+          />
+        </div>
+      </div>
+      <div class="row col-12">
+        <div id="dropzone1" class="dropzone col-4"></div>
+        <div id="dropzone2" class="dropzone col-4"></div>
+        <div id="dropzone3" class="dropzone col-4"></div>
+      </div>
+      <button id="checkButton" class="btn btn-primary">Comprobar</button>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="completar.js"></script>
+  </body>
+</html>

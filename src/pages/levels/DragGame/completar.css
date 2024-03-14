@@ -1,0 +1,55 @@
+.word {
+  width: 150px;
+  height: auto;
+  background-color: transparent;
+  margin: 5px;
+  text-align: center;
+  line-height: 50px;
+  cursor: pointer;
+  background-image: none;
+}
+
+.dropzone {
+  width: 300px;
+  height: 30vh;
+  background-color: #ddd;
+  margin: 5px;
+}
+#dropzone1 {
+  background-image: url("./images/casitaS2.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#dropzone2 {
+  background-image: url("./images/casitaM2.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#dropzone3 {
+  background-image: url("./images/casitaL2.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.word.dragging {
+  opacity: 0.5;
+}
+
+.word.correct {
+  background-color: green;
+}
+
+.word.wrong {
+  background-color: red;
+}
+
+button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
