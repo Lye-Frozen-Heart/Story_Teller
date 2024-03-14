@@ -1,7 +1,4 @@
-import "bootstrap/dist/css/bootstrap.min.css";
-//import ReactPlayer from "react-player";
-//import ReactCanvasPaint from "react-canvas-paint";
-import ReactPlayer from "react-player";
+import { useEffect, useState } from "react";
 import {
   Card,
   CardBody,
@@ -13,18 +10,36 @@ import {
   DropdownToggle,
   Row,
 } from "reactstrap";
-import { Footer } from "../components";
-import { useState } from "react";
-import { catalonia, morroco, spain } from "../assets";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faLanguage } from "@fortawesome/free-solid-svg-icons";
+import { faL, faLanguage } from "@fortawesome/free-solid-svg-icons";
+import { catalonia, morroco, spain } from "../assets";
+import { Footer } from "../components";
+import ReactPlayer from "react-player";
 
 function Home() {
   const [dropdownOpen, setDropdownOpen] = useState(false);
-  const [selectedUrl, setSelectedUrl] = useState(
+  const [selectedLanguage, setSelectedLanguage] = useState("spain");
+  const [url, setUrl] = useState(
     "https://www.dailymotion.com/video/k7GBIZq3QTexSXA6WhI"
   );
+  const [playing, setPlaying] = useState(false);
+
   const toggle = () => setDropdownOpen((prevState) => !prevState);
+
+  const handleUrlChange = (url) => {
+    setSelectedLanguage(url);
+  };
+
+  useEffect(() => {
+    if (selectedLanguage === "spain")
+      setUrl("https://www.dailymotion.com/video/k7GBIZq3QTexSXA6WhI");
+    if (selectedLanguage === "catalan")
+      setUrl("https://www.dailymotion.com/video/k4V3SA9C53cmoxA6WhE");
+    if (selectedLanguage === "morroco")
+      setUrl("https://www.dailymotion.com/video/kCAmnkBNr5wbHjA6WqC");
+    setPlaying(true);
+  }, [selectedLanguage, url]);
+
   return (
     <div className="justify-content-center align-items-center displayer-container">
       <Row>
@@ -36,35 +51,17 @@ function Home() {
                   <FontAwesomeIcon icon={faLanguage} />
                 </DropdownToggle>
                 <DropdownMenu>
-                  <DropdownItem
-                    onClick={() =>
-                      setSelectedUrl(
-                        "https://www.dailymotion.com/video/k5NIvZ0I8EpGBvA6WhI"
-                      )
-                    }
-                  >
+                  <DropdownItem onClick={() => handleUrlChange("spain")}>
                     <p>
                       <img src={spain} alt="spain" /> Castellano
                     </p>
                   </DropdownItem>
-                  <DropdownItem
-                    onClick={() =>
-                      setSelectedUrl(
-                        "https://www.dailymotion.com/video/k4V3SA9C53cmoxA6WhE"
-                      )
-                    }
-                  >
+                  <DropdownItem onClick={() => handleUrlChange("catalan")}>
                     <p>
                       <img src={catalonia} alt="catalonia" /> Català
                     </p>
                   </DropdownItem>
-                  <DropdownItem
-                    onClick={() =>
-                      setSelectedUrl(
-                        "https://www.dailymotion.com/video/kCAmnkBNr5wbHjA6WqC"
-                      )
-                    }
-                  >
+                  <DropdownItem onClick={() => handleUrlChange("morroco")}>
                     <p>
                       <img src={morroco} alt="morroco" /> عرب
                     </p>
@@ -73,7 +70,7 @@ function Home() {
               </Dropdown>
             </CardHeader>
             <CardBody className="d-flex justify-content-center align-items-center">
-              <ReactPlayer controls={true} url={selectedUrl} />
+              <ReactPlayer controls={true} url={url} playing={playing} />
             </CardBody>
           </Card>
         </Col>

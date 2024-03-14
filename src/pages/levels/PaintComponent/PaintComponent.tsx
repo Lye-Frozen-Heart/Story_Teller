@@ -23,7 +23,6 @@ import {
   FaRedo,
   FaGithub,
 } from "react-icons/fa";
-import { HexColorPicker } from "react-colorful";
 import { IoMdWater } from "react-icons/io";
 import { useHistory } from "react-artboard";
 

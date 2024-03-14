@@ -8,6 +8,7 @@ import { hawk2, howl2, oink1mp3 } from "../src/assets/sounds";
 import MemoryGame from "./pages/levels/MemoryGame/MemoryGame";
 import { Header } from "./components";
 import PaintComponent from "./pages/levels/PaintComponent/PaintComponent";
+import DragGame from "./pages/levels/DragGame/DragGame";
 function App() {
   const answerPig = "pig",
     answerHawk = "hawk",
@@ -16,7 +17,8 @@ function App() {
     redirectWolf = "/animal_h",
     redirectHawk = "/memory",
     redirectMemory = "/paint",
-    redirectBrush = "/levels";
+    redirectBrush = "/draggame",
+    redirectDrag = "/levels";
   return (
     <>
       <Header />
@@ -60,6 +62,10 @@ function App() {
         <Route
           path="/paint"
           Component={() => <PaintComponent redirect={redirectBrush} />}
+        ></Route>
+        <Route
+          path="/draggame"
+          Component={() => <DragGame redirect={redirectDrag} />}
         ></Route>
       </Routes>
     </>

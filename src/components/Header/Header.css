@@ -1,3 +1,11 @@
 .text-dark {
   color: black;
 }
+
+.wood {
+  background: url("../../assets/wood-texture-background-free-vector.jpg");
+  background-position: 50%;
+}
+.icon-shadow {
+  filter: drop-shadow(1px 1px 1px #ffce5c);
+}
