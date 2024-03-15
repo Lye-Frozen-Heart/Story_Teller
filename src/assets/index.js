@@ -30,3 +30,8 @@ export { default as F } from "./F.png";
 export { default as G } from "./G.png";
 export { default as H } from "./H.png";
 export { default as cover } from "./cover.png";
+export { default as notmark } from "./notmark.svg";
+export { default as spain } from "./spain.svg";
+export { default as catalonia } from "./catalonia.svg";
+export { default as morroco } from "./morroco.svg";
+export { default as lang } from "./lang.svg";
