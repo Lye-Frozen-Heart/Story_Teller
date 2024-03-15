@@ -44,7 +44,7 @@ function Home() {
     <div className="justify-content-center align-items-center displayer-container">
       <Row>
         <Col className="d-flex justify-content-center">
-          <Card className="w-50">
+          <Card className="w-50 mt-3">
             <CardHeader className="d-flex justify-content-end">
               <Dropdown isOpen={dropdownOpen} toggle={toggle}>
                 <DropdownToggle>
