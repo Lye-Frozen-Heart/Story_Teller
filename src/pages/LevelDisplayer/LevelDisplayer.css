@@ -1,5 +1,5 @@
 .displayer-container {
-  margin: 5%;
+  margin: 6 !important;
 }
 .done-tick {
   width: 15%;
@@ -19,4 +19,7 @@
   .displayer-container {
     margin: 15%;
   }
+}
+.cardLevel:hover {
+  box-shadow: 0 0 0 3px rgb(180, 180, 180);
 }

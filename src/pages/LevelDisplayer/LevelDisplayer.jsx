@@ -47,9 +47,19 @@ const LevelDisplayer = () => {
   return (
     <>
       <div className="justify-content-center align-items-center displayer-container">
-        <Row>
+        <Row style={{
+          marginTop: "7%",
+        }}>
           <Col>
-            <Card>
+            <Card
+              className="cardLevel"
+              style={{
+                borderWidth: "3px",
+                borderStyle: "solid",
+                transition: "box-shadow 0.3s",
+                margin: "15% 5% 0 5%",
+              }}
+            >
               <CardBody className="d-flex justify-content-center align-items-center">
                 <a
                   href="/animal_p"
@@ -70,7 +80,15 @@ const LevelDisplayer = () => {
             </Card>
           </Col>
           <Col>
-            <Card>
+            <Card
+              className="cardLevel"
+              style={{
+                borderWidth: "3px",
+                borderStyle: "solid",
+                transition: "box-shadow 0.3s",
+                margin: "15% 5% 0 5%",
+              }}
+            >
               <CardBody className="d-flex justify-content-center align-items-center">
                 <a
                   href="/animal_w"
@@ -91,7 +109,15 @@ const LevelDisplayer = () => {
             </Card>
           </Col>
           <Col>
-            <Card>
+            <Card
+              className="cardLevel"
+              style={{
+                borderWidth: "3px",
+                borderStyle: "solid",
+                transition: "box-shadow 0.3s",
+                margin: "15% 5% 0 5%",
+              }}
+            >
               <CardBody className="d-flex justify-content-center align-items-center">
                 <a
                   href="/animal_h"
@@ -112,9 +138,17 @@ const LevelDisplayer = () => {
             </Card>
           </Col>
         </Row>
-        <Row className="mt-2">
+        <Row >
           <Col>
-            <Card>
+            <Card
+              className="cardLevel"
+              style={{
+                borderWidth: "3px",
+                borderStyle: "solid",
+                transition: "box-shadow 0.3s",
+                margin: "15% 5% 0 5%",
+              }}
+            >
               <CardBody className="d-flex justify-content-center align-items-center">
                 <a
                   href="/memory"
@@ -136,7 +170,15 @@ const LevelDisplayer = () => {
           </Col>
 
           <Col>
-            <Card>
+            <Card
+              className="cardLevel"
+              style={{
+                borderWidth: "3px",
+                borderStyle: "solid",
+                transition: "box-shadow 0.3s",
+                margin: "15% 5% 0 5%",
+              }}
+            >
               <CardBody className="d-flex justify-content-center align-items-center">
                 <a
                   href="/paint"
@@ -157,7 +199,15 @@ const LevelDisplayer = () => {
             </Card>
           </Col>
           <Col>
-            <Card>
+            <Card
+              className="cardLevel"
+              style={{
+                borderWidth: "3px",
+                borderStyle: "solid",
+                transition: "box-shadow 0.3s",
+                margin: "15% 5% 0 5%",
+              }}
+            >
               <CardBody className="d-flex justify-content-center align-items-center">
                 <a
                   href="/draggame"

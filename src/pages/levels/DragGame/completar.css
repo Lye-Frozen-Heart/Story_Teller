@@ -2,7 +2,7 @@
   width: 150px;
   height: auto;
   background-color: transparent;
-  margin: 5px;
+  margin: 0 5px;
   text-align: center;
   line-height: 50px;
   cursor: pointer;
@@ -10,11 +10,17 @@
 }
 
 .dropzone {
-  width: 300px;
+  width: 220px;
   height: 30vh;
-  background-color: #ddd;
-  margin: 5px;
+  border: 3px solid rgb(180, 180, 180);
+  background-color: rgba(150, 230, 232, 255);
+  border-radius: 5%;
+  margin: 5px 15px;
 }
+.dropzone:hover {
+  box-shadow: 0 0 0 3px rgb(180, 180, 180);
+}
+
 #dropzone1 {
   background-image: url("./images/casitaS2.png");
   background-size: contain;

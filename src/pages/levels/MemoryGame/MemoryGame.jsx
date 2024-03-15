@@ -89,7 +89,7 @@ const MemoryGame = (props) => {
   };
 
   return !success ? (
-    <div style={{ margin: "5%" }}>
+    <div style={{ margin: "7% 5% 0 5%" }}>
       <h1 className="text-center">Encuentra las parejas!</h1>
       <Container className="d-flex justify-content-center align-items-center mt-5 flex-column">
         {renderCards()}

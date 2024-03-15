@@ -11,16 +11,16 @@ const Header = (args) => {
         <NavbarBrand href="/" className="text-dark">
           <FontAwesomeIcon
             icon={faBook}
-            size="2x"
-            color="purple"
+            size="3x"
+            color="black"
             className="icon-shadow"
           />
         </NavbarBrand>
         <NavbarBrand href="/levels">
           <FontAwesomeIcon
             icon={faGamepad}
-            size="2x"
-            color="purple"
+            size="3x"
+            color="black"
             className="icon-shadow"
           />
         </NavbarBrand>

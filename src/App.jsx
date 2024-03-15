@@ -1,5 +1,4 @@
 import { Route, Routes } from "react-router-dom";
-
 import "./App.css";
 import Home from "./pages/Home";
 import LevelDisplayer from "./pages/LevelDisplayer/LevelDisplayer";
@@ -9,7 +8,10 @@ import MemoryGame from "./pages/levels/MemoryGame/MemoryGame";
 import { Header } from "./components";
 import PaintComponent from "./pages/levels/PaintComponent/PaintComponent";
 import DragGame from "./pages/levels/DragGame/DragGame";
+import useLanguage from "./components/ButtonDropdown/useState";
 function App() {
+  const { videoUrl, changeLanguage } = useLanguage();
+  
   const answerPig = "pig",
     answerHawk = "hawk",
     answerWolf = "wolf";
@@ -21,9 +23,9 @@ function App() {
     redirectDrag = "/levels";
   return (
     <>
-      <Header />
+      <Header/>
       <Routes>
-        <Route path="/" Component={Home} />
+        <Route path="/" element={<Home />} />
         <Route path="/levels" Component={LevelDisplayer} />
         <Route
           path="/animal_p"

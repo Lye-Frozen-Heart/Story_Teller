@@ -7,5 +7,9 @@
   background-position: 50%;
 }
 .icon-shadow {
-  filter: drop-shadow(1px 1px 1px #ffce5c);
+  filter: drop-shadow(1px 1px 1px #ffe7ae);
+}
+
+.icon-shadow:hover {
+  filter: drop-shadow(3px 3px 2px #ffee00);
 }

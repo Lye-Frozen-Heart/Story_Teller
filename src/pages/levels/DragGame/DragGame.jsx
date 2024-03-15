@@ -69,58 +69,80 @@ const DragGame = (props) => {
 
   return !success ? (
     <>
-      <div className="d-flex justify-content-center align-items-center m-5">
-        <Row>
-          <Col draggable="true" onDragStart={dragStart} onDragEnd={dragEnd}>
-            <img src={cerditoSM} alt="cerditoP" id="word1" className="word" />
-          </Col>
-          <Col draggable="true" onDragStart={dragStart} onDragEnd={dragEnd}>
-            <img src={cerditoM} alt="cerditoM" id="word2" className="word" />
-          </Col>
-          <Col draggable="true" onDragStart={dragStart} onDragEnd={dragEnd}>
-            <img src={cerditoXL} alt="cerditoXL" id="word3" className="word" />
-          </Col>
-        </Row>
-      </div>
-      <div className="d-flex justify-content-center align-items-center">
-        <Row>
-          <Col
-            id="dropzone1"
-            className="dropzone d-flex justify-content-center align-items-center"
-            onDragOver={dragOver}
-            onDragEnter={dragEnter}
-            onDragLeave={dragLeave}
-            onDrop={drop}
-          ></Col>
-          <Col
-            id="dropzone2"
-            className="dropzone d-flex justify-content-center align-items-center"
-            onDragOver={dragOver}
-            onDragEnter={dragEnter}
-            onDragLeave={dragLeave}
-            onDrop={drop}
-          ></Col>
-          <Col
-            id="dropzone3"
-            className="dropzone d-flex justify-content-center align-items-center"
-            onDragOver={dragOver}
-            onDragEnter={dragEnter}
-            onDragLeave={dragLeave}
-            onDrop={drop}
-          ></Col>
-        </Row>
-      </div>
-      <div className="d-flex justify-content-center align-items-center">
-        <Button
-          color="success"
-          id="checkButton"
-          onClick={() => {
-            checkWordsPlacement;
-            setSuccess(true);
-          }}
-        >
-          Comprobar
-        </Button>
+      <div className="container mt-5">
+        <div className="imageContainer d-flex justify-content-center align-items-center m-3 ">
+          <Row>
+            <Col draggable="true" onDragStart={dragStart} onDragEnd={dragEnd}>
+              <img
+                src={cerditoSM}
+                alt="cerditoP"
+                id="word1"
+                className="word mt-5"
+              />
+            </Col>
+            <Col draggable="true" onDragStart={dragStart} onDragEnd={dragEnd}>
+              <img
+                src={cerditoM}
+                alt="cerditoM"
+                id="word2"
+                className="word mt-5"
+              />
+            </Col>
+            <Col
+              draggable="true"
+              onDragStart={dragStart}
+              onDragEnd={dragEnd}
+              className="mt-2"
+            >
+              <img
+                src={cerditoXL}
+                alt="cerditoXL"
+                id="word3"
+                className="word marginNone mt-5 "
+              />
+            </Col>
+          </Row>
+        </div>
+        <div className="d-flex justify-content-center align-items-center ">
+          <Row>
+            <Col
+              id="dropzone1"
+              className="dropzone d-flex justify-content-center align-items-center "
+              onDragOver={dragOver}
+              onDragEnter={dragEnter}
+              onDragLeave={dragLeave}
+              onDrop={drop}
+            ></Col>
+            <Col
+              id="dropzone2"
+              className="dropzone d-flex justify-content-center align-items-center"
+              onDragOver={dragOver}
+              onDragEnter={dragEnter}
+              onDragLeave={dragLeave}
+              onDrop={drop}
+            ></Col>
+            <Col
+              id="dropzone3"
+              className="dropzone d-flex justify-content-center align-items-center"
+              onDragOver={dragOver}
+              onDragEnter={dragEnter}
+              onDragLeave={dragLeave}
+              onDrop={drop}
+            ></Col>
+          </Row>
+        </div>
+        <div className="d-flex justify-content-center align-items-center">
+          <Button
+            color="success"
+            id="checkButton"
+            onClick={() => {
+              checkWordsPlacement;
+              setSuccess(true);
+            }}
+          >
+            Comprobar
+          </Button>
+        </div>
       </div>
     </>
   ) : (
